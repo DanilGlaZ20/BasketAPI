@@ -20,7 +20,7 @@ builder.Services.AddSingleton<IPlayerContext, PlayerContext>();
 builder.Services.AddSingleton<IClubContext, ClubContext>();
 
 builder.Services.AddHealthChecks().AddCheck<HealthCheckController>("health");
-
+builder.Host.UseSystemd();
 
 var app = builder.Build();
 app.UseRouting();
