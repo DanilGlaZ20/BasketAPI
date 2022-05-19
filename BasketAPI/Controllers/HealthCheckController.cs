@@ -31,7 +31,7 @@ namespace BasketAPI.Controllers
             }
 
             return Task.FromResult(
-                HealthCheckResult.Unhealthy("Сервис умер"));
+                HealthCheckResult.Unhealthy("Сервис жив"));
         }
     }
 }
