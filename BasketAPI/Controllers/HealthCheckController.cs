@@ -23,7 +23,7 @@ namespace BasketAPI.Controllers
                 if (responsePlayer.IsSuccessStatusCode && responseClub.IsSuccessStatusCode)
                 {
                     return Task.FromResult(
-                        HealthCheckResult.Healthy("Сервис живой"));
+                        HealthCheckResult.Healthy("Сервис мертв"));
                 }
             }
             catch (Exception e)
