@@ -18,9 +18,9 @@ namespace BasketAPI.Controllers
             HttpClient client = new HttpClient();
             try
             {
-                HttpResponseMessage responseAnimals = client.GetAsync("http://localhost:5000/api/animals").Result;
-                HttpResponseMessage responseAreals = client.GetAsync("http://localhost:5000/api/areals").Result;
-                if (responseAnimals.IsSuccessStatusCode && responseAreals.IsSuccessStatusCode)
+                HttpResponseMessage responseClub = client.GetAsync("http://localhost:5000/api/club").Result;
+                HttpResponseMessage responsePlayer = client.GetAsync("http://localhost:5000/api/player").Result;
+                if (responsePlayer.IsSuccessStatusCode && responseClub.IsSuccessStatusCode)
                 {
                     return Task.FromResult(
                         HealthCheckResult.Healthy("Сервис живой"));
