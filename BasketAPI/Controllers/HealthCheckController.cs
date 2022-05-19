@@ -23,7 +23,7 @@ namespace BasketAPI.Controllers
                 if (responsePlayer.IsSuccessStatusCode && responseClub.IsSuccessStatusCode)
                 {
                     return Task.FromResult(
-                        HealthCheckResult.Healthy("Сервис мертв"));
+                        HealthCheckResult.Healthy("Сервис жив"));
                 }
             }
             catch (Exception e)
@@ -31,7 +31,7 @@ namespace BasketAPI.Controllers
             }
 
             return Task.FromResult(
-                HealthCheckResult.Unhealthy("Сервис жив"));
+                HealthCheckResult.Unhealthy("Сервис мертв"));
         }
     }
 }
